@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Ensure the body and html take up the full height and stack content vertically */
+    background-image: url(https://wallpapers.com/images/hd/travel-4k-volcano-ynlmn2hmts0n7gsw.jpg);
+    background-size: cover; /* Or 'contain' based on your preference */
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+h1 {
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+    font-size: 3em; /* Adjust font size as needed */
+    color: #dc143c; /* Crimson color for visibility */
+    text-align: center;
+    margin: 20px 0; /* Adjust margin for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+    letter-spacing: 2px; /* Add letter spacing for a modern look */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+    padding: 10px; /* Add padding for better spacing */
+    position: relative; /* For pseudo-element positioning */
+}
+/* For pseudo-element positioning */
+
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    background: inherit;
+    z-index: -1;
+    filter: blur(10px); /* Add a blur effect for a glowing shadow */
+}
+
+#main {
+    flex: 1; /* Allow the main content to take up the remaining space */
+    width: 100%;
+    padding-top: 13%; /* Ensure the main content starts below the fixed header */
+}
+
+#header {
+    margin: 1%;
+    padding: 0 2%; /* Adjust padding for better spacing */
+    height: 13%;
+    width: 96%; /* Adjust width to account for margin */
+    position: fixed;
+    top: 0; /* Ensure header stays at the top */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Use space-around for even distribution */
+    font-size: large;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 2px solid #000; /* Add a bottom border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for better visual separation */
+    z-index: 1000; /* Ensure header stays above other content */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color and border color */
+}
+
+/* Hover effect for header */
+#header:hover {
+    color: #8b008b; /* Change text color on hover */
+    border-bottom: 2px solid #8b008b; /* Change border color on hover */
+}
+
+
+
+/* Style for text containers */
+.texts {
+    flex: 1; /* Allow each text container to take up equal space */
+    text-align: center; /* Center the text within each container */
+    padding: 10px 0; /* Add some padding for better spacing */
+}
+
+.texts p {
+    margin: 0; /* Remove default margin for paragraphs */
+    color: inherit; /* Inherit color from parent */
+    cursor: pointer;
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .texts {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+h6 {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(88, 13, 13);    /* Replace with the color code you prefer */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: add a subtle shadow for better visibility */
+}
+ /* Optional: add a subtle shadow for better visibility */
+
